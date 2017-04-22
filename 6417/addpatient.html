@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>Patient E-Data</title>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+<script>
+
+</script>
+</head>
+<style>
+body{
+background: url("3.jpg");
+  font-family: 'roboto', sans-serif;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.login-page {
+  width:460px;
+  padding: 2% 0 0;
+  margin: auto;
+}
+form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+form .input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+form .button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#CD5C5C;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+form button:hover,.form button:active,.form button:focus {
+  background:#FFA07A;
+}
+@media (max-width: 500px) {
+.login-page {
+  width: 310px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+}
+h1{
+text-align:center;
+}
+.button9 {
+    background-color:#F08080;
+    border:none;
+    color: white;
+	float:right;
+	margin:10px;
+    padding: 12px 27px;
+	position:relative;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	cursor: pointer;
+}
+</style>
+<body>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+<a href="logout.php" class="button9" align="right" >Logout</a>
+ <a href="blood.php" style=" background-color:#3CB371;" class="button9" >Blood Search</a><br>
+<div class="login-page">
+ <h1>E-Health Care System</h1><br/><br/>
+<form action="insert.php">
+ID<input class="input" type="text" name="id" id="id"/><br/>
+First Name<input class="input" type="text" name="fname" id="fname"/><br/>
+Last Name<input class="input" type="text" name="lname" id="lname"/><br/>
+Blood Group<select class="input" name="blood" id="blood"/>
+<option value="">Select bloodgroup</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+</select><br/>
+Date of Birth<input class="input" type="date" name="dob" id="dob" placeholder="Date of Birth"/><br/>
+<h4>Gender</h4>
+<input  type="radio" name="gender" id="gender1" value="Male" checked/>Male<input type="radio" name="gender" value="Female" id="gender2"/>Female<input type="radio" name="gender" value="Transgender" id="gender3"/>Transgender<br/><br/>
+Mobile<input class="input" type="numbers" name="pnum" id="pnum"/><br/>
+<h4>Address</h4>
+Door no/House no<input class="input" type="text" name="dno" id="dno"/><br/>
+Street<input class="input" type="text" name="street" id="street"/><br/>
+City<input class="input" type="text" name="city" id="city"/><br/>
+State<input class="input" type="text" name="state" id="state"/><br/>
+Pin code<input class="input" type="numbers" name="pin" id="pin"/><br/>
+Country<input class="input" type="text" name="country" id="country"/><br/>
+Nationality<input class="input" type="text" name="nation" id="nation"/><br/>
+Donar<input type="radio" name="donar" id="donar1" value="Yes" checked/>Yes<input type="radio" name="donar" value="No" id="donar2"/>No<br/><br/>
+Diabetes<input type="radio" name="dia" id="dia1" value="Yes" checked/>Yes<input type="radio" name="dia" value="No" id="dia2"/>No<br/><br/>
+Medical Insurance<input type="radio" name="mi" value="Yes" id="mi1" checked/>Yes<input type="radio" name="mi" value="No" id="mi2"/>No<br/><br/><hr/>
+<h2>Responsible Person</h2><br/>
+1)   Name<input class="input" type="text" name="r1name" id="r1name"/><br/>
+Relation<select class="input" name="r1rel" id="r1rel"/>
+<option value="">Select relation</option>
+<option value="father">Father</option>
+<option value="mother">Mother</option>
+<option value="brother">Brother</option>
+<option value="sister">Sister</option>
+<option value="friend">Friend</option>
+<option value="wife">Wife</option>
+</select><br/>
+Mobile no<input class="input" type="numbers" id="r1pnum" name="r1pnum"/><br/>
+<hr width="60%">
+2)   Name<input class="input" type="text" name="r2name" id="r2name"/><br/>
+Relation<select class="input" name="r2rel" id="r2rel"/>
+<option value="">Select relation</option>
+<option value="father">Father</option>
+<option value="mother">Mother</option>
+<option value="brother">Brother</option>
+<option value="sister">Sister</option>
+<option value="friend">Friend</option>
+<option value="wife">Wife</option>
+</select><br/>
+Mobile no<input class="input" type="numbers" id="r2pnum" name="r2pnum"/><br/>
+<!--<div id="ajaxDiv"></div>-->
+<center><input class="button"  type="submit"  value="Submit"/></center>
+</form></div>
+</body>
+<script type="text/javascript">
+  /*function ajaxFunction(){
+               var ajaxRequest;  // The variable that makes Ajax possible!
+               var ajaxRequest;  // The variable that makes Ajax possible!
+               
+               try {
+                  // Opera 8.0+, Firefox, Safari
+                  ajaxRequest = new XMLHttpRequest();
+               }catch (e) {
+                  // Internet Explorer Browsers
+                  try {
+                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                  }catch (e) {
+                     try{
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                     }catch (e){
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                     }
+                  }
+               }
+               
+               // Create a function that will receive data 
+               // sent from the server and will update
+               // div section in the same page.
+          
+               ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+                     var ajaxDisplay = document.getElementById('ajaxDiv');
+                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                  }
+               }   
+               
+               // Now get the value from user and pass it to
+               // server script.   
+          
+               var id=document.getElementById('id').value;
+			   var queryString="?id="+id;
+			   
+			   var fname=document.getElementById('fname').value;
+			   var queryString=queryString+"&fname="+fname;
+			   
+			   var lname=document.getElementById('lname').value;
+			   var queryString=queryString+"&lname="+lname;
+			   
+			   var blood=document.getElementById('blood').value;
+			   var queryString=queryString+"&blood="+blood;
+			   
+			   var dob=document.getElementById('dob').value;
+			   var queryString=queryString+"&dob="+dob;
+			   
+			   var gender= document.querySelector('input[name = "gender"]:checked').value;
+				var queryString=queryString+"&gender="+gender;
+				
+				var pnum=document.getElementById('pnum').value;
+			   var queryString=queryString+"&pnum="+pnum;
+			   
+			   var dno=document.getElementById('dno').value;
+			   var queryString=queryString+"&dno="+dno;
+			   
+			   var street=document.getElementById('street').value;
+			   var queryString=queryString+"&street="+street;
+			   
+			   var city=document.getElementById('city').value;
+			   var queryString=queryString+"&city="+city;
+			   
+			   var state=document.getElementById('state').value;
+			   var queryString=queryString+"&state="+state;
+			   
+			   var pin=document.getElementById('pin').value;
+			   var queryString=queryString+"&pin="+pin;
+			   
+			   var country=document.getElementById('country').value;
+			   var queryString=queryString+"&country="+country;
+			   
+			   var nation=document.getElementById('nation').value;
+			   var queryString=queryString+"&nation="+nation;
+			   
+			   var donar= document.querySelector('input[name = "donar"]:checked').value;
+				var queryString=queryString+"&donar="+donar;
+				
+				var dia= document.querySelector('input[name = "dia"]:checked').value;
+				var queryString=queryString+"&dia="+dia;
+				
+				var mi= document.querySelector('input[name = "mi"]:checked').value;
+				var queryString=queryString+"&mi="+mi;
+				
+				var r1name=document.getElementById('r1name').value;
+			   var queryString=queryString+"&r1name="+r1name;
+			   
+			   var sel = document.getElementById('r1rel');
+				var r1rel = sel.options[sel.selectedIndex].value;
+               var queryString = queryString+"&r1rel=" + r1rel ;
+			   
+			   var r1pnum=document.getElementById('r1pnum').value;
+			   var queryString=queryString+"&r1pnum="+r1pnum;
+			   
+			   var r2name=document.getElementById('r2name').value;
+			   var queryString=queryString+"&r2name="+r2name;
+			   
+			   var sel = document.getElementById('r2rel');
+				var r2rel = sel.options[sel.selectedIndex].value;
+               var queryString = queryString+"&r2rel=" + r2rel ;
+			   
+			   var r2pnum=document.getElementById('r2pnum').value;
+			   var queryString=queryString+"&r2pnum="+r2pnum;
+				
+				alert(queryString);
+               ajaxRequest.open("GET", "insert.php" + queryString, true);
+			   
+               ajaxRequest.send(null);     
+			   
+			   
+            }*/
+			</script>
+</html>

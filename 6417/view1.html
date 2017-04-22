@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Reports View</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+</head>
+<body>
+<style>
+button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#CD5C5C;
+  width: 5%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+button:hover{
+  background:#FFA07A;
+}
+input{
+ font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 20%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  }
+</style>
+<div id="header">
+<label>Patient Report View</label>
+</div>
+<div id="body">
+	<form action="fileup/view.php" method="post">
+	<input type="text" name="pid" id="pid" Placeholder="Patient Id">
+	<button type="submit">View</button>
+	</form>
+    <br><br />
+  
+      
+</div>
+
+</body>
+</html>
